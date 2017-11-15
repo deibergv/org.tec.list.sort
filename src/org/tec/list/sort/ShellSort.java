@@ -1,8 +1,8 @@
 package org.tec.list.sort;
 
-public class ShellSort {
+public class ShellSort <T extends Comparable<T>>{
 
-	public static <T extends Comparable<T>> void shellSort(T[] arr) {
+	public T[] sort(T[] arr) {
 		int j;
 		for (int gap = arr.length / 2; gap > 0; gap /= 2) {
 			for (int i = gap; i < arr.length; i++) {
@@ -13,5 +13,6 @@ public class ShellSort {
 				arr[j] = Swap;
 			}
 		}
+		return arr;
 	}
 }

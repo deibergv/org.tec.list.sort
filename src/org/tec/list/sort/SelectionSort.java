@@ -1,8 +1,8 @@
 package org.tec.list.sort;
 
-public class SelectionSort {
+public class SelectionSort <T extends Comparable<T>>{
 
-	public static <T extends Comparable<T>> void selectionSort(T[] arr) {
+	public T[] sort(T[] arr) {
 
 		for (int i = 0; i < arr.length - 1; ++i) {
 			int minIndex = i;
@@ -15,5 +15,7 @@ public class SelectionSort {
 			arr[i] = arr[minIndex];
 			arr[minIndex] = Swap;
 		}
+		
+		return arr;
 	}
  }
