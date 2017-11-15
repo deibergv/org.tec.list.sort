@@ -194,7 +194,7 @@ public class MergeSort {
 		        return d1.compareTo(d2);
 		      }
 		    };
-		}
+		
 	
 		Sort(list, comp);
 		
